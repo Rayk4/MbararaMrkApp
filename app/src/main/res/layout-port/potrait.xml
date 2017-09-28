@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/food"
+        android:layout_toEndOf="@+id/list"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/list">
+
+        <include
+            android:id="@+id/foodlayout"
+            layout="@layout/fragment_food_layout"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fruits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/list"
+        android:visibility="visible"
+        android:layout_toRightOf="@+id/list">
+        <include layout="@layout/fragment_fruits_layout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sourceflavors"
+        android:layout_toEndOf="@+id/list"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/list">
+
+        <include
+            android:id="@+id/sourceflavorslayout"
+            layout="@layout/fragment_sourceflavors_layout"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/teasupplements"
+        android:layout_toEndOf="@+id/list"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/list">
+
+        <include
+            android:id="@+id/teasupplementslayout"
+            layout="@layout/fragment_teasupplements_layout"/>
+
+    </RelativeLayout>
+</RelativeLayout>
